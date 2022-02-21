@@ -22,3 +22,5 @@
 '''
 a = 'abc'
 print(a.split())
+b = [1, 2, 3]
+# print(''.join(b)) # TypeError: sequence item 0: expected str instance, int found

@@ -1,0 +1,14 @@
+url:
+  https://www.imooc.com/
+types:
+  - 前言
+  - 前端
+  - 后端
+  - 移动端
+  - 云计算
+python:
+  web: django
+  spader: bs5
+a: 1
+b: 2
+c: [a,b,c]

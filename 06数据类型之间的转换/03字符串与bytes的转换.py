@@ -2,8 +2,6 @@
 '''
 bytes比特类型：二进制的数据流，一种特殊的字符串，字符串前+b标记
 
-
-
 '''
 a = 'hello zengliwen'
 print(a,type(a))
@@ -12,7 +10,7 @@ b = b'hello zengliwne'
 print(b,type(b))
 
 print(b.capitalize())
-print(b.replace(b'zengliwen',b'liwen'))
+print(b.replace(b'zengliwen', b'liwen'))
 print(b[3])
 print(b[:3])
 print(b.find(b'x'))
