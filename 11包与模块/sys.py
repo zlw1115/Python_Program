@@ -8,6 +8,10 @@ version(属性) 无 获取python版本 sys.version 字符串
 argv *argv 程序外部获取参数 sys.argv 列表
 '''
 import sys
+a = [11,22,33]
+b = a
+print(sys.getrefcount(a))
+print(sys.argv[0])
 command = sys.argv[1]
 if command == 'modules':
     modules = sys.modules

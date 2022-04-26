@@ -15,3 +15,40 @@ setattr     Obj,key,value   为实例化对象添加属性与值      无
 getattr     obj,key         通过对象获取属性           任何类型        getattr(obj,key)
 any         Iterable        判断内容是否又true值        Bool        any['a','',[],1]
 '''
+# food = input('你想吃什么呢：')
+# print(food)
+#
+# help(input)
+
+class Test(object):
+    a = 1
+    b = 2
+
+    def __init__(self):
+        self.a = self.a
+        self.b = self.b
+
+
+test = Test()
+print(test.a)
+result = vars(test)
+print(result)
+
+print(hasattr(test, 'a'))
+print(hasattr(list, 'appends'))
+
+setattr(test, 'c', 3)
+print(test.c)
+print(vars(test))
+
+# setattr(list, 'c', 1)
+if hasattr(list, 'appends'):
+    print(getattr(list, 'appends'))
+else:
+    print('不能存在')
+
+a = ['', None, True, 0]
+print(all(a))
+print(any(a))
+# all - > and
+# any - > or

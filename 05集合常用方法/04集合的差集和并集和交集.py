@@ -27,3 +27,9 @@ union:返回多个集合的并集，即包含了所有集合的元素，重复�
     返回原始集合与对比集合的并集
     
 '''
+bin_rpm_name_list = ['libsecurity-conf','libsecurity1','libsecurity1-devel','libsecurity-conf-devel']
+latest_bin_rpm_name_list =['libsecurity1','libsecurity1-devel','libsecurity1-debuginfo','libsecurity1-debugsource']
+all_rpms = list(set(bin_rpm_name_list).union(set(latest_bin_rpm_name_list)))
+print(all_rpms)
+all_rpms = list(set(bin_rpm_name_list).intersection(set(latest_bin_rpm_name_list)))
+print(all_rpms)

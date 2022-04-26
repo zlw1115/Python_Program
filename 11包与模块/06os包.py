@@ -18,6 +18,9 @@ isfile path 是否是文件 os.path.isfile('') bool类型
 join path,path* 路径字符串合并 os.path.join('') 字符串
 split path 以最后一层路径为基准切割 os.path.split() 列表
 
+传入的参数需为绝对路径
+isdir  path 
+isabs path 
 '''
 import os
 import os.path
@@ -30,7 +33,7 @@ print(os.path.isabs('animal'))
 
 
 new_path = '%s/test1' % current_path
-if os.path.exists(new_path):
+if not os.path.exists(new_path):
     os.makedirs(new_path)
 
 data = os.listdir(current_path)
@@ -38,25 +41,26 @@ print(data)
 
 new_path2 = os.path.join(current_path, 'test2', 'abc')
 print(new_path2)
-if os.path.exists(new_path2):
+if not os.path.exists(new_path2):
     os.makedirs(new_path2)
-if os.path.exists('test3'):
+if not os.path.exists('test3'):
     os.makedirs('test3')
 
 if os.path.exists('test2/abc'):
     os.removedirs('test2/abc')
-if os.path.exists('test3'):
-    os.rename('test3', 'test3_new')
-if os.path.exists('pip_image.py'):
-    os.rename('pip_image.py', 'pip3_image.py')
-if os.path.exists('%s/test3_new' % current_path):
-    os.rmdir('%s/test3_new' % current_path)
-if os.path.exists('test1'):
-    os.rmdir('test1')
-
-current_path = current_path + '/package_os.py'
+# if os.path.exists('test3'):
+#     os.rename('test3', 'test3_new')
+# if os.path.exists('pip_image.py'):
+#     os.rename('pip_image.py', 'pip3_image.py')
+# if os.path.exists('%s/test3_new' % current_path):
+#     os.rmdir('%s/test3_new' % current_path)
+# if os.path.exists('test1'):
+#     os.rmdir('test1')
+#
+print('----')
+current_path = current_path + '/test.py'
 print(os.path.isfile(current_path))
 print(os.path.split(current_path))
 print(os.path.isdir(os.path.split(current_path)[0]))
-
-print(dir(os.path))
+#
+# print(dir(os.path))

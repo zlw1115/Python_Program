@@ -32,5 +32,6 @@ def b_service_check(token,timestamp):
 
 if __name__ == '__main__':
     need_help_token,timestamp = custom()
+    # print(need_help_token,timestamp)
     result = b_service_check(need_help_token,timestamp)
     print(result)

@@ -18,5 +18,5 @@ print(result)
 
 result = info.index('is')
 print(result)
-result = info.index('ok')
-print(result)
+# result = info.index('ok')
+# print(result)

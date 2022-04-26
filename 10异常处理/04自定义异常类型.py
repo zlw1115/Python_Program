@@ -11,10 +11,13 @@ raise
 '''
 def test(num):
     if num==100:
+        print('start')
         raise ValueError('num 不能为100')
+        print('函数内能执行吗')
     return num
 
-# result = test(50)
+# result = test(100) # 程序从这条语句中断
+# print('函数外能执行吗')
 # print(result)
 
 # result = test(100)
@@ -24,13 +27,13 @@ def test2(num):
         return test(num)
     except ValueError as e:
         return e
-result = test2(100)
-print(result)
+# result = test2(100) #except捕获了异常，程序可以接着往下执行
+# print(result) #可以执行
 
-# def test3():
-    # reise '错误了'
+def test3():
+    raise '错误了'
 
-# test3()
+# test3() #程序从这中断执行
 
 def test4(name):
     if name == 'zlw':

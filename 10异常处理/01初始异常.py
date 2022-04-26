@@ -13,6 +13,7 @@ def upper(str_data):
         new_str = str_data.upper()
     except Exception as e:
         print('程序出错了:{}'.format(e))
+    # print语句还可以执行
     print('aa')
     return new_str
 
@@ -24,12 +25,13 @@ def test():
     except ZeroDivisionError as e:
         print(e)
 
-result = upper(1)
-print(result)
+# result = upper(1) #捕获到了异常
+# test() # 继续执行了这条语句，捕获到了异常
+# print('执行了吗') # 继续执行了这条语句
 
 '''
 捕获通用异常类型
-    无法确定是哪种异常的情况下使用的不或方法
+    无法确定是哪种异常的情况下使用的捕获方法
     try:
         <代码块>
     except EXception as e:
@@ -40,7 +42,7 @@ print(result)
     except <具体的异常类型> as e
     
 '''
-# test()
+
 '''
 捕获多个异常
 try:
@@ -63,3 +65,16 @@ except (ZeroDivisionError,Exception) as e:
     print(e)
 当except代码后边的异常类型使用元组包裹起来，捕获到那种抛那种
 '''
+def test1():
+    try:
+        print('try start')
+        res = 1 / 0
+        print('try finish') # 这条语句不执行
+    except Exception as e:
+        print('Exception')
+        print(e)
+    except ZeroDivisionError as e:  # 可以有多个except
+        print('ZeroDivisionError')
+        print(e)
+
+test1()
